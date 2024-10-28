@@ -15,5 +15,5 @@ function detectDeviceType() {
   return 'desktop';
 }
 
-const deviceType = detectDeviceType();
-document.getElementById('a').textContent = deviceType;
+const deviceTypeB = detectDeviceType();
+document.getElementById('a').textContent = deviceTypeB;
