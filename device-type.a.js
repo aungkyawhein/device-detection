@@ -18,4 +18,4 @@ const DeviceInfoA = () => {
   return deviceType;
 };
 const deviceTypeA = DeviceInfoA();
-document.getElementById('b').textContent = deviceTypeA;
+document.getElementById('a').textContent = deviceTypeA;

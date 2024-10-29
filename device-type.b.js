@@ -22,4 +22,4 @@ function getDeviceType() {
 }
 
 const deviceTypeB = getDeviceType();
-document.getElementById('a').textContent = deviceTypeB;
+document.getElementById('b').textContent = deviceTypeB;
