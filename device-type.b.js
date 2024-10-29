@@ -3,16 +3,16 @@ function detectDeviceType() {
 
   // Checks for tablets
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(ua)) {
-    return 'tablet';
+    return 'Tablet';
   }
 
   // Checks for mobile phones
   if (/mobile/i.test(ua)) {
-    return 'mobile';
+    return 'Mobile';
   }
 
   // Checks for desktop devices
-  return 'desktop';
+  return 'Desktop';
 }
 
 const deviceTypeB = detectDeviceType();

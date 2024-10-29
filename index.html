@@ -3,10 +3,38 @@
 <head>
     <title>Device Info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        font-size: 10vw;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: aliceblue;
+      }
+      div {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: gray;
+      }
+      span {
+        color: darkslateblue;
+      }
+    </style>
 </head>
 <body>
-  <p>device is: <span id="a"></span></p>
-  <p>device is: <span id="b"></span></p>
+  <div>
+    <p>device is: <span id="a"></span></p>
+    <p>device is: <span id="b"></span></p>
+  </div>
     <script src="device-type.a.js"></script>
     <script src="device-type.b.js"></script>
 </body>
