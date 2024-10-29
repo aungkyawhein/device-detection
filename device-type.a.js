@@ -1,4 +1,4 @@
-const DeviceInfo = () => {
+const DeviceInfoA = () => {
   const userAgent = navigator.userAgent;
   let deviceType = "Desktop";
   if (/iPad|Android/i.test(userAgent) && !/Mobile/i.test(userAgent)) {
@@ -11,5 +11,5 @@ const DeviceInfo = () => {
 
   return deviceType;
 };
-const deviceTypeA = DeviceInfo();
+const deviceTypeA = DeviceInfoA();
 document.getElementById('b').textContent = deviceTypeA;
