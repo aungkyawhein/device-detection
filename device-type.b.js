@@ -1,19 +1,25 @@
-function detectDeviceType() {
-  const ua = navigator.userAgent;
+function getDeviceType() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const platform = navigator.platform.toLowerCase();
 
-  // Checks for tablets
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(ua)) {
-    return 'Tablet';
+  // Check for iPad specifically
+  if (/ipad/.test(userAgent) || (/macintosh/.test(platform) && 'ontouchend' in document)) {
+    return "Tablet";
   }
 
-  // Checks for mobile phones
-  if (/mobile/i.test(ua)) {
-    return 'Mobile';
+  // Check for mobile devices
+  if (/android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+    return "Mobile";
   }
 
-  // Checks for desktop devices
-  return 'Desktop';
+  // Check for tablets based on screen size
+  if (window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches) {
+    return "Tablet";
+  }
+
+  // Default to Desktop
+  return "Desktop";
 }
 
-const deviceTypeB = detectDeviceType();
+const deviceTypeB = getDeviceType();
 document.getElementById('a').textContent = deviceTypeB;
