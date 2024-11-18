@@ -21,5 +21,4 @@ const getDeviceType = () => {
   return deviceType;
 };
 
-const deviceType = getDeviceType();
-document.getElementById('a').textContent = deviceType;
+export const deviceType = getDeviceType();
